@@ -21,12 +21,18 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'trailblazer-rails'
 gem 'dry-validation'
+gem 'multi_json'
+gem 'representable'
+gem 'simple_service'
+gem 'tailwindcss', '~> 1.0.0'
+gem 'pagy', '~> 3.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capybara'
+  gem 'webdrivers'
   gem 'rspec-rails'
   gem 'jazz_fingers'
 end

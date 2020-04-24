@@ -1,24 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
 
-Things you may want to cover:
+This micro app tries to show how to decouple representation and validation from ActiveRecord.
 
-* Ruby version
+Main goal is to make app structure go beyond MVC scaffold and introduce business logic off the Rails-way.
 
-* System dependencies
+Main idea was taken from Trailblazer, but implementation took only Representable gem for parsing JSON
+and dry-validation gem for type validation.
 
-* Configuration
+## Provisioning
 
-* Database creation
+1. `docker-compose build` and ☕
+2. `docker-compose run runner yarn install` and 🥐
+3. `docker-compose run runner ./bin/setup` and 🍌
 
-* Database initialization
+## Running the app
 
-* How to run the test suite
+* `docker-compose up rails`
 
-* Services (job queues, cache servers, search engines, etc.)
+## Creating a ticket via API
 
-* Deployment instructions
+* `curl -d "@spec/fixtures/files/ticket_with_excavator.json" -X POST http://localhost:3000/api/v1/tickets`
 
-* ...
+## Manage tickets
+
+* open http://localhost:3000/
+
+### Possible improvements
+
+* Use components in views, like Cells or view_component
+
+### Credits:
+
+* Docker stuff was taken from https://github.com/evilmartians/chronicles-gql-martian-library
+
