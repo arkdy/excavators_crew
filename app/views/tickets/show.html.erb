@@ -1,0 +1,39 @@
+<div class="flex mb-4">
+  <div class="w-5/12 h-screen">
+    <%= render 'tickets/map', polygon: ticket.geo_polygon %>
+  </div>
+  <div class="w-7/12 bg-white h-64 px-10 py-10">
+    <a href="<%= tickets_url %>">← Back to tickets</a>
+    <h2 class="pt-4 text-2xl">Ticket <%= ticket.id %></h2>
+
+    <div class="max-w-4xl px-10 my-4 py-6 bg-white rounded-lg shadow-md">
+      <table>
+        <tr>
+          <td class="pr-3">Response Due:</td>
+          <td><span class="text-xl text-gray-700 font-bold"><%= ticket.response_due_at %></span></td>
+        </tr>
+        <tr>
+          <td>Request Number:</td>
+          <td><span class="text-xl text-gray-700 font-bold"><%= ticket.request_number %></span></td>
+        </tr>
+        <tr>
+          <td>Sequence Number:</td>
+          <td><span class="text-xl text-gray-700 font-bold"><%= ticket.sequence_number %></span></td>
+        </tr>
+        <tr>
+          <td>Request Type:</td>
+          <td><span class="text-xl text-gray-700 font-bold"><%= ticket.request_type %></span></td>
+        </tr>
+        <tr>
+          <td>Primary Service Code Area:</td>
+          <td><span class="text-xl text-gray-700 font-bold"><%= ticket.primary_service_area_code %></span></td>
+        </tr>
+        <tr>
+          <td class="pr-3">Additional Serivce Code Areas:</td>
+          <td><span class="text-xl text-gray-700 font-bold"><%= ticket.additional_service_area_codes.join(',') %></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
