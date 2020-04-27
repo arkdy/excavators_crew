@@ -55,11 +55,6 @@ ENV LANG=C.UTF-8 \
 RUN gem update --system && \
     gem install bundler:$BUNDLER_VERSION
 
-# Install Chrome
-RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add \
-  && echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
-  && apt-get -y update && apt-get -y install google-chrome-stable
-
 # Run binstubs without prefixing with `bin/` or `bundle exec`
 ENV PATH /app/bin:$PATH
 
