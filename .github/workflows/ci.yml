@@ -42,8 +42,8 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
 
-      - name: Run RSpec
-        run: COVERAGE=true bundle exec rspec  --require rails_helper
+      - name: Run RSpec without system tests
+        run: COVERAGE=true bundle exec rspec --require rails_helper rspec --exclude-pattern "spec/system/**/*_spec.rb"
         env:
           RAILS_ENV: test
           POSTGRES_USER: postgres
