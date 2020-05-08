@@ -12,7 +12,7 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 5.x'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
@@ -25,7 +25,6 @@ gem 'dry-validation'
 gem 'multi_json'
 gem 'representable'
 gem 'simple_service'
-gem 'tailwindcss', '~> 1.0.0'
 gem 'pagy', '~> 3.5'
 
 group :development, :test do

@@ -1,14 +1,16 @@
 {
   "name": "excavators_crew",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "4.2.2",
-    "tailwindcss": "~1.0.0"
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "@rails/webpacker": "5.1.1",
+    "tailwindcss": "^1.4.5",
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.10.3"
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.2",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-cli": "^3.3.11"
   }
 }
